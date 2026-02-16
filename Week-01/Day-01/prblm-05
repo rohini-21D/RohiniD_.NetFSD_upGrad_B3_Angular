@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Computer Science and Engineering</h1>
+        <h2 align="center">Nagarjuna College of Engineering and Technology</h2>
+        <hr>
+    </header>
+
+    <section>
+        <h1>FACULTY DETAILS: </h1>
+
+        <table border="1" style="border-collapse: collapse;" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>Faculty Name</th>
+                    <th>Designation</th>
+                    <th>Subject Handled</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Dr. S. Ramesh</td>
+                    <td>Professor</td>
+                    <td>Data Structures</td>
+                </tr>
+
+                <tr>
+                    <td>Ms. K. Priya</td>
+                    <td>Assistant Professor</td>
+                    <td>Web Technologies</td>
+                </tr>
+
+                <tr>
+                    <td>Mr. A. Vijay</td>
+                    <td>Lecturer</td>
+                    <td>Operating Systems</td>
+                </tr>
+
+                <tr>
+                    <td>Dr. L. Meena</td>
+                    <td>Associate Professor</td>
+                    <td>Programming in C</td>
+                </tr>
+
+                <tr>
+                    <td>Mr. R. Karthik</td>
+                    <td>Assistant Professor</td>
+                    <td>Database Management</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+
+        <h1>Subjects Offered: </h1>
+
+        <ul>
+            <li>Data Structures</li>
+            <li>Database Management Systems</li>
+            <li>Programming in C</li>
+            <li>Operating Systems</li>
+            <li>Web Technologies</li>
+            <li>Computer Networks</li>
+            <li>Software Engineering</li>
+        </ul>
+
+        
+        <h3>Weekly Timetable: </h3>
+
+        <table border="1" cellpadding="10" style="border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Subject</th>
+                    <th>Time Slot</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Data Structures</td>
+                    <td>9:00 AM – 10:00 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Database Management Systems</td>
+                    <td>10:00 AM – 11:00 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Programming in C</td>
+                    <td>11:00 AM – 12:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td>Operating Systems</td>
+                    <td>12:00 PM – 01:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td>Web Technologies</td>
+                    <td>02:00 PM – 03:00 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Satueday</td>
+                    <td>Data Structures</td>
+                    <td>03:00 PM – 04:00 PM</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+    <footer>
+
+        <p align="center">562103, NCET, Near Belgavi, Karnataka  <a href="#" style="text-decoration: none;">+91-9874563210</a></p>
+
+    </footer>
+</body>
+</html>
