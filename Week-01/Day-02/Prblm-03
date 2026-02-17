@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> Welcome to Registration Form: </h1>
+    <hr>
+    <form action="register.php" method="get">
+        <fieldset>
+            <legend>Registration Form</legend>
+
+            <label for="user_name">UserName: </label>
+            <input type="text" name="Name" id="user_name" placeholder="Enter Your Name..." required />
+            <br><br>
+
+            <label for="user_email">Email: </label>
+            <input type="email" name="E-mail" id="user_email" placeholder="Enter Your emial....." required />
+            <br><br>
+
+            <label for="user_mobile">Mobile Number: </label>
+            <input type="tel" name="MobileNumber" id="user_mobile" placeholder="Enter 10 digits Mobile Number" pattern="[0-9]{10}" required />
+            <br><br>
+
+            <label for="user_age">Age :</label>
+            <input type="number" name="Age" id="user_age" min="18" max="40" required />
+            <br><br>
+
+            <label for="date">Date: </label>
+            <input type="date" name="date" id="date"  required />
+            <br><br>
+
+             <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
