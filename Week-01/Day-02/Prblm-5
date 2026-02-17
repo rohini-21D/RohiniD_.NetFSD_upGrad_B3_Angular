@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Welcome to Advanced HTML Course Enrollment </h1>
+    <hr>
+    <form action="register.php" align="center" method="get">
+        <fieldset>
+            <legend>Register here</legend>
+            <label for="user_name">User Name: </label>
+            <input type="text" name="userName" id="user_name" placeholder="enter your name...." required/>
+            <br><br>
+
+            <label for="user_pass">Password: </label>
+            <input type="password" name="Password" id="user_pass" placeholder="enter your password.." required/>
+            <br><br>
+
+            <label for="re-enter">Re-enter Password: </label>
+            <input type="password" name="Re-enter Password" id="re-enter" placeholder="re-enter your password.." required/>
+            <br><br>
+
+            <label for="number">Mobile Number :</label>
+            <input type="tel" name="Mobile" id="number" pattern="[0-9]{10}" placeholder="Enter Your number..."   required/>
+            <br><br>
+
+            <label for="courses-choice">Enrollment Course Suggestions: </label>
+            <input list="courses" name="courses-choice" id="courses-choice" placeholder="Type to Search....." required />
+            <datalist id="courses">
+                <option value="HTML5 Fundamentals">
+                <option value="CSS3 Styling">
+                <option value="JavaScript Basics">
+                <option value="React for Beginners">
+                <option value="Python Data Science">
+                <option value="Web Design UI/UX">
+            </datalist>
+            <br><br>
+            <label for="progress">Enrollment Completion : </label>
+            <progress id="progress" value="5" max="10"></progress> <span>50%</span>
+            <br><br>
+
+            <label for="skill-level">Skill level: </label>
+            <meter value="8" max="10"></meter>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
