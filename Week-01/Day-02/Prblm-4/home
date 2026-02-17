@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Portal</title>
+</head>
+<body>
+    <h1 align="center">Welcome to Training Portal</h1>
+    <hr>
+    <nav align="center" style="font-size: 30px; text-decoration: none;">
+       
+        <a href="home.html">Home</a>  |
+        <a href="Courses/courses.html">Courses</a>
+
+
+        <p>Home</p>
+        <h1>Welcome to Home Page <br>try to Explore more courses <br>Click on the Courses</h1>
+
+        
+    </nav>
+
+</body>
+</html>
