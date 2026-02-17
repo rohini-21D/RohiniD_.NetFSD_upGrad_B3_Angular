@@ -1,1 +1,25 @@
-hii
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <header>
+        <nav align="center" >
+            <h1 >Welcome to Innomatic</h1>
+            <hr>
+
+            <a href="index.html" style="font-size: 20px; text-decoration: none;">Home</a>  |
+            <a href="./courses.html" style="font-size: 20px; text-decoration: none;">Courses</a>  |
+            <a href="./contact.html" style="font-size: 20px; text-decoration: none;">ContactUs</a>
+        </nav>
+    </header>
+
+    <main>
+        
+        <p style="font-size: 20px;">Innomatics Research Labs is a premier EdTech company established in 2018, recognized for bridging the gap between academic learning and industry requirements through practical, project-based training in emerging technologies. Known as one of India's most awarded institutes, it focuses on "Transforming Careers and Lives" by providing in-depth training in Data Science, AI, Machine Learning, and Full Stack Development. </p>
+    </main>
+</body>
+</html>
