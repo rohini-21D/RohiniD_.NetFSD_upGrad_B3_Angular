@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us </title>
+</head>
+<body>
+    <header>
+        <nav align="center" >
+            <h1 >Welcome to Innomatic</h1>
+            <hr>
+
+            <a href="index.html" style="font-size: 20px; text-decoration: none;">Home</a>  |
+            <a href="./courses.html" style="font-size: 20px; text-decoration: none;">Courses</a>  |
+            <a href="./contact.html" style="font-size: 20px; text-decoration: none;">ContactUs</a>
+        </nav>
+    </header>
+    <main>
+        <h1 align="center">Thank You For Contacting Us....</h1>
+        <h1 align="center">If you any Queries feel free to contact Us.</h1>
+    </main>
+</body>
+</html>
