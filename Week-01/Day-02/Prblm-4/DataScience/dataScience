@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center"> DATA SCIENCE</h1>
+    <hr>
+
+    <nav align="center">
+        <a href="../home.html">Home</a> |
+        <a href="../Courses/courses.html">Courses</a>
+    </nav>
+
+    <p>
+        <a href="../home.html">Home</a> >
+        <a href="../Courses/courses.html">Courses</a> >
+        Data Science
+    </p>
+
+    <h3>Welcome to Data Science Course</h3>
+</body>
+</html>
