@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <h1 align="center">Courses</h1>
+    <hr>
+
+    <nav align="center">
+        <a href="../home.html">Home</a> |
+        <a href="courses.html">Courses</a>
+    </nav>
+    <p>
+        <a href="../home.html">Home</a> > Courses
+    </p>
+
+    <h2>Select Courses</h2>
+
+    <a href="../WebDevelopment/webdevelopment.html"> Web Development</a>
+    <br><br>
+
+    <a href="../DataScience/datascience.html">Data Science</a>
+</body>
+</html>
