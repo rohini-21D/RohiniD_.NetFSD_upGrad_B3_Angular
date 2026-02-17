@@ -8,7 +8,7 @@
 <body>
     <h1 align="center"> Welcome to Registration Form: </h1>
     <hr>
-    <form action="register.php" method="get">
+    <form action="register.php" method="post">
         <fieldset>
             <legend>Registration Form</legend>
 
