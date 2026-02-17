@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    <header>
+        <nav align="center" >
+            <h1 >Welcome to Innomatic</h1>
+            <hr>
+
+            <a href="index.html" style="font-size: 20px; text-decoration: none;">Home</a>  |
+            <a href="./courses.html" style="font-size: 20px; text-decoration: none;">Courses</a>  |
+            <a href="./contact.html" style="font-size: 20px; text-decoration: none;">ContactUs</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Thank You for coming into Courses Section </h1>
+        <h1>The courses are :</h1>
+
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Angular</li>
+            <li>Node.js</li>
+        </ol>
+    </main>
+</body>
+</html>
