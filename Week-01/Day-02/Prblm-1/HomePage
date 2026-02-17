@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linking Two Pages</title>
+</head>
+<body>
+    <header>
+        <h1 align="center">Linking of Two Pages</h1>
+        <hr>
+        <nav align="center">
+            <a href="#">Home</a> | 
+            <a href="link.html">Contact Us</a> |
+        </nav>
+    </header>
+
+    <form action="register.php" method="get">
+        <fieldset>
+            <legend>Registration </legend>
+            <label for="u_name">UserName: </label>
+            <input type="text" name="Name" id="u_name" placeholder="Enter your name...." required/>
+            <br><br>
+
+            <label for="u_email">Email :</label>
+            <input type="email" name="E-mail" id="u_email" placeholder="Enter your email.." required />
+            <br><br>
+
+            <label for="u_passwd">Password: </label>
+            <input type="password" name="Password" id="u_passwd" placeholder="Enter your password" required />
+            <br><br>
+
+            <label>Gender:</label> 
+                <input type="radio" name="Gender" id="u_male" value="Male" >
+                <label for="Gender">Male</label>
+                <input type="radio" name="Gender" id="u_femael" value="Female">
+                <label for="Gender">Female</label>
+            
+            <br><br>
+
+            <label for="u_course">Course Selection :</label>
+            <select name="Selected Course" id="u_course" required>
+                <option>Select Your Option</option>
+                <option value="BE">BE</option>
+                <option value="BA">BA</option>
+                <option value="LLB">LLB</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+</html>
