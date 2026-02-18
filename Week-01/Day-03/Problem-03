@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:antiquewhite;
+        }
+        h1,h2{
+            text-align: center;
+            text-decoration: underline;
+            font-style: italic;
+            color: cadetblue;
+        }
+        .product{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            margin: 50px;
+        }
+        .img, .features{
+            /* border: 3px solid black; */
+            width: 300px;
+            height: 300px;
+            border-radius: 30px;
+            background-color:azure;
+        }
+        .features{
+            margin-left: 80px;
+        }
+        .ftr{
+            list-style-type:circle;
+            font-size: 25px
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Product Features..</h1>
+
+        <hr>
+
+        <div class="product">
+            <div class="img">
+                <img src="https://inquirecontent2.ingrammicro.com/images/300/1082788331.jpg" width="300px" height="300px" alt="Mobile">
+            </div>
+            <div class="features">
+                <h2>Features of this product</h2>
+                <ul class="ftr">
+                    <li>Fast Performance</li>
+                    <li>User Friendly Interface</li>
+                    <li>Secure Data Protection</li>
+                    <li>Lightweight Design</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+</body>
+</html>
