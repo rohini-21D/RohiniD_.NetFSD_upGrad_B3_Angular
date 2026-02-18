@@ -1,0 +1,38 @@
+
+header{
+    background-color: aqua;
+}
+h1{
+    text-align: center;
+    letter-spacing: 10px;
+}
+nav p{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+#form_details{
+    background-color: aquamarine;
+    text-align: center;
+}
+#user_id ,#user_pswd , #re-enter, #email{
+    /* border: 2px solid  black; */
+    border-color: blueviolet;
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+.label_names{
+    font-size: 20px;
+    font-style: italic;
+}
+#Submit_btn{
+    font-size: 30px;
+    border-radius: 20px;
+    border: none;
+    font-style: italic;
+    color: burlywood;
+    padding: 20px;
+    margin: 20px;
+}
