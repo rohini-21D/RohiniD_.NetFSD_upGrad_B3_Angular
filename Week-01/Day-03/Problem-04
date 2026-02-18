@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+    <style>
+        .heading1{
+            text-align: center;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+        .cards{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 30px;
+        }
+        .blog{
+            text-align: center;
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            width: 300px;
+            height: 200px;
+            background-color: bisque;
+            padding: 50px;
+        }
+        .title{
+            /* font-style: italic; */
+            text-transform: uppercase;
+        }
+        .des{
+            font-size: 20px;
+            font-style: italic;
+            word-spacing: 2px;
+            margin-bottom: 25px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="heading1">Welcome to Blog Page</h1>
+        <hr>
+    </header>
+    <main>
+         <div class="cards">
+            <div class="blog 1 blog">
+                <h2 class="title">HTML Basics</h2>
+                <p class="des">Learn the fundamentals of HTML and how to build web pages.</p>
+                <button class="btn">ReadMore</button>
+            </div>
+            <div class="blog 2 blog">
+                <h2 class="title">CSS Styling</h2>
+                <p class="des">Understand how to style websites using CSS properties.</p>
+                <button class="btn">ReadMore</button>
+            </div>
+            <div class="blog 3 blog">
+                <h2 class="title">JavaScript </h2>
+                <p class="des">Explore JavaScript and make your websites interactive.</p>
+                <button class="btn">ReadMore</button>
+            </div>
+            <div class="blog 4 blog">
+                <h2 class="title">Angular</h2>
+                <p class="des">Explore Angular and Learn new Functionalities....</p>
+                <button class="btn">ReadMore</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
