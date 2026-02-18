@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Welcome to CSS Selectors</h1>
+            <p>Below You can Register...</p>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <form action="reister.php" method="post" id="form_details">
+            <fieldset>
+                <legend>Register Here :</legend>
+
+                <label for="user_id" class="label_names">Enter Your Name: </label>
+                <input type="text" name="Name" id="user_id" placeholder="Enter your name...." required/>
+                <br><br>
+
+                <label for="user_pswd" class="label_names">Password: </label>
+                <input type="password" name="Password" id="user_pswd" placeholder="Enter your password..." required />
+                <br><br>
+
+                <label for="re-enter" class="label_names">Re-Enter :</label>
+                <input type="password" name="Re-enter" id="re-enter" placeholder="Enter your password..." required />
+                <br><br>
+
+                <label for="email" class="label_names">Email:</label>
+                <input type="email" name="E-mail" id="email" placeholder="Enter your Email.." required />
+                <br><br>
+
+                <input type="submit" value="Submit" id="Submit_btn">
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
