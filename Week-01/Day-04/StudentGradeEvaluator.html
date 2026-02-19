@@ -16,6 +16,9 @@
             color: white;
             padding: 15px 0;
         }
+        #user_marks{
+            margin: 50px;
+        }
     </style>
 </head>
 <body>
@@ -23,25 +26,33 @@
         <h1>Student Grade Evaluator</h1>
         <p>You can Find Your Grade </p>
     </header>
+
+    <label for="user_marks">Enter Your Marks: </label>
+    <input type="number" name="Marks" id="user_marks">
+    <br>
+    <input type="button" value="Evaluate" onclick="buttonEvaluate()">
     <script>
 
-        let marks=prompt("Enter Your Marks : ");
-        let grade;
-        if(marks>=75){
-            grade="Grade A";
+        
+        function buttonEvaluate(){
+            let marks=document.getElementById("user_marks").value;
+            let grade;
+            if(marks>=75){
+                grade="Grade A";
+            }
+            else if(marks>=60){
+                grade="Grade B";
+            }
+            else if(marks>=40){
+                grade="Grade C";
+            }
+            else{
+                grade="Fail"
+            }
+            
+            console.log("Student marks:",marks);
+            console.log("Grade :",grade);
         }
-        else if(marks>=60){
-            grade="Grade B";
-        }
-        else if(marks>=40){
-            grade="Grade C";
-        }
-        else{
-            grade="Fail"
-        }
-
-        console.log("Student marks :",marks);
-        console.log("Grade :",grade);
     </script>
 </body>
 </html>
