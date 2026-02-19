@@ -6,25 +6,29 @@
     <title>NUmber Analysis Tool</title>
 </head>
 <body>
+
+    <label for="user_num">Enter Your Number: </label>
+    <input type="number"  id="user_num" >
+    <br><br>
+
+    <input type="button" value="Button" onclick="ButtonClick()">
     <script>
 
-        let inputNum=prompt("Enter a Number: ");
-        let num=parseInt(inputNum);
+        function ButtonClick(){
 
-        if(isNaN(num)){
-            console.log("You have Entered a Wrong number");
-        }
-        else{
+            let num=document.getElementById("user_num").value;
+            
+    
             let sinCndn=(num>0)?"Positive":"Negative";
-            console.log(`The Entered number ${num}  :`,sinCndn);
-
+                console.log(`The Entered number ${num}  :`,sinCndn);
+                
             if(num % 2==0){
                 console.log(`The number ${num} :`, "Even" );
             }
             else{
                 console.log(`The number ${num} :`, "Odd")
             }
-
+                
             if(num>1){
                 console.log(`The numbers from 1 to ${num} are :`)
                 for(let i=1;i<=num;i++){
