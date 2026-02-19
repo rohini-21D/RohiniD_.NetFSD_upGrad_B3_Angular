@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Evaluator</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:bisque;
+            margin:0;
+        }
+        header{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Grade Evaluator</h1>
+        <p>You can Find Your Grade </p>
+    </header>
+    <script>
+
+        let marks=prompt("Enter Your Marks : ");
+        let grade;
+        if(marks>=75){
+            grade="Grade A";
+        }
+        else if(marks>=60){
+            grade="Grade B";
+        }
+        else if(marks>=40){
+            grade="Grade C";
+        }
+        else{
+            grade="Fail"
+        }
+
+        console.log("Student marks",marks);
+        console.log("Grade",grade);
+    </script>
+</body>
+</html>
