@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUmber Analysis Tool</title>
+</head>
+<body>
+    <script>
+
+        let inputNum=prompt("Enter a Number: ");
+        let num=parseInt(inputNum);
+
+        if(isNaN(num)){
+            console.log("You have Entered a Wrong number");
+        }
+        else{
+            let sinCndn=(num>0)?"Positive":"Negative";
+            console.log(`The Entered number ${num}  :`,sinCndn);
+
+            if(num % 2==0){
+                console.log(`The number ${num} :`, "Even" );
+            }
+            else{
+                console.log(`The number ${num} :`, "Odd")
+            }
+
+            if(num>1){
+                console.log(`The numbers from 1 to ${num} are :`)
+                for(let i=1;i<=num;i++){
+                    console.log(i)
+                }
+            }
+        }
+    </script>
+</body>
+</html>
