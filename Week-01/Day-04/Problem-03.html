@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Discount Calculator</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        header{
+            text-align: center;
+            background-color: antiquewhite;
+            padding: 15px 0;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .discount-calculator{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DISCOUNT CALCULATOR</h1>
+        <P>YOU CAN GET TO KNOW HOW MUCH YOU CAN GET DISCOUNT</P>
+    </header>
+    <br><br>
+    <div class="container">
+        <div class="discount-calculator">
+            <label for="user_amnt">Enter Total Purchase Amount:</label>
+            <input type="number" name="Number" id="user_amnt">
+            <br><br>
+
+            <input type="button" value="Button" id="cal_btn" onclick="calculateAmount()">
+
+            <h2 id="dis_amnt"></h2>
+        </div>
+    </div>
+
+    <script>
+
+        function calculateAmount(){
+            let Amount=document.getElementById("user_amnt").value;
+            // console.log(totalAmount);
+            let discountAmount=document.getElementById("dis_amnt");
+
+            let discount;
+            let finalAmount;
+            if(Amount>=5000){
+                discount=Amount*0.20;
+                // console.log(discount)
+                finalAmount=Amount-discount;
+                // console.log(finalAmount);
+                discountAmount.innerHTML="After discount the total amount is :" +finalAmount;
+                // console.log(discountAmount);
+            }
+            else if(Amount>=3000){
+                discount=Amount*0.10;
+                finalAmount=Amount-discount;
+                discountAmount.innerHTML="After discount the total amount is :"+finalAmount;
+            }
+            else{
+                discountAmount.innerHTML="You Have purchased less than 3000 so There is no Discount. Better luck next time...."
+            }
+        }
+    </script>
+  </body>
+</html>
