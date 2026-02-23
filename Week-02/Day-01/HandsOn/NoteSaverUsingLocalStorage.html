@@ -1,1 +1,43 @@
-<!DOCTYPE Html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 align="center">Personal Notes Saver using LocalStorage </h2>
+    <hr>
+    <label for="textarea">Text Area: </label>
+    <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea>
+
+    <button onclick="saveButton()">Save</button>
+    <button onclick="getbutton()">GetText</button>
+    <button onclick="clearButton()">Clear</button>
+
+    <h1 id="display"></h1>
+    <script>
+        // Function for save
+        function saveButton(){
+           let textArea=document.getElementById("textarea").value;
+           localStorage.setItem("TextArea",textArea);
+           alert("The data is Stored in LocalStorage..")
+        }
+
+        function getbutton(){
+            let disObj=document.getElementById("display");
+
+            let result=localStorage.getItem("TextArea");
+            // console.log(result);
+
+            disObj.innerText="The Text Which you have Entered is : "+result;
+        }
+        // function for clear
+        function clearButton(){
+            localStorage.removeItem("TextArea");
+            alert("The data which You have Saved is removed from the Local Storage...")
+        }
+    </script>
+</body>
+</html>
