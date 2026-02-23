@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard Grid</title>
+
+<style>
+
+/* Element selector */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+/* Descendant selector */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #34495e;
+    border-radius: 5px;
+}
+
+/* Main content */
+.main-content {
+    padding: 20px;
+    background-color: #f4f6f8;
+}
+
+/* Cards grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Card styling */
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Images inside cards */
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+    /* Sidebar becomes top navigation */
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /* Stack cards vertically */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Users</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://picsum.photos/300/200?1">
+                <h3>Total Users</h3>
+                <p>1,250</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/300/200?2">
+                <h3>Sales</h3>
+                <p>$8,400</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/300/200?3">
+                <h3>Orders</h3>
+                <p>320</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/300/200?4">
+                <h3>Performance</h3>
+                <p>Good</p>
+            </div>
+
+            <div class="card">
+                <img src="https://picsum.photos/300/200?5">
+                <h3>Revenue</h3>
+                <p>$12,000</p>
+            </div>
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
