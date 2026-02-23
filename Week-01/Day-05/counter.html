@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<body>
+    <h1 align="center">Counter App with Scope Control </h1>
+    <hr>
+
+    <button onclick="incrementCounter(1)">Increment</button>
+    <h1 id="value">0</h1>
+    <button onclick="resetButton()">Reset</button>
+<script>
+    let counter=0;
+
+    let value=document.getElementById("value");
+    function incrementCounter(step){
+        counter+=step;
+        // console.log(counter);
+        value.innerText=counter;
+    }
+
+    function resetButton(){
+        counter=0;
+        value.innerText=counter;
+    }
+</script>
+</body>
+</html>
