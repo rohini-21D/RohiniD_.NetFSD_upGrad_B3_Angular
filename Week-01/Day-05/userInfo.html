@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="displayUserInfo(userObj)">Button</button>
+
+    <p id="userData"></p>
+    <script>
+        let userObj={
+            name:"rohini",
+            age:20,
+            city:"anantapur"
+        }
+
+        function displayUserInfo(userObj){
+            let paraObj=document.getElementById("userData");
+
+            paraObj.innerText="The User Name: "+ userObj.name + "\n" + "The age is :" +userObj.age +"\n" + "The city is : " +userObj.city;
+
+            // console.log(paraObj);
+        }
+    </script>
+</body>
+</html>
