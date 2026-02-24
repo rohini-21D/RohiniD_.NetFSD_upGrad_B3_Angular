@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student marks Analyzer..</title>
+    <style>
+        #stud_details{
+            border: 2px solid blue;
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Student Details </h1>
+    <hr>
+
+    <button onclick="buttonClick()">Student Details</button>
+    <div id="stud_details"></div>
+
+    
+    <script>
+
+        function buttonClick(){
+
+            const stdMarks=[60,90,80,80];
+            
+            
+            const updatemarks = stdMarks.map((marks)=>marks);
+            
+            console.log(updatemarks);
+            
+            const totalMarks=stdMarks.reduce((total,marks)=>{
+                return total+marks;
+            });
+            console.log(totalMarks);
+            
+            const average=totalMarks/updatemarks.length;
+            console.log(average);
+            
+            let result= (average<=50) ? "Fail" :"Pass";
+            console.log(result);
+            
+            let StdDetails=document.getElementById("stud_details");
+            
+            StdDetails.innerHTML=`
+            <p><strong>Student Marks :</strong> ${stdMarks} </p>
+            <p><strong>Total Marks :</strong> ${totalMarks} </p>
+            <p><strong>Average :</strong> ${average} </p>
+            <p><strong>Result :</strong> ${result} </p>
+            `;
+        }
+    </script>
+</body>
+</html>
