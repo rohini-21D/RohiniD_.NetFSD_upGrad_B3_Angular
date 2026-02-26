@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        span{
+            font-size: 15px;
+            color: red;
+        }
+        .success{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Form Validations</h1>
+    <hr>
+
+    
+        <fieldset>
+            <legend>Registration Form </legend>
+            <label for="username">Name: </label>
+            <input type="text" name="username" id="username" onchange=validateName() placeholder="Enter Your name.."/>  <span id="nameMsg"></span><br><br>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email"onchange=validateEmial() placeholder="Enter Your Email..." > <span id="emailMsg"></span> <br><br>
+            <label for="age">Age :</label>
+            <input type="number" name="age" id="age" onchange="validateAge()" > <span id="ageMsg"></span> <br><br>
+            
+            <button onclick="fromSubmitButton()">Register</button>
+
+            
+        </fieldset>
+    
+    <h1 id="result"></h1>
+    <script>
+        var nameValid = false;
+        var emailValid = false;
+        var ageValid = false;
+        function validateName(){
+            let name=document.getElementById("username").value;
+            let msg=document.getElementById("nameMsg");
+
+            if(name.length<3){
+                msg.innerText="Nmae must be atleast 3 Characters";
+                nameValid=false;
+                 
+            }else{
+                msg.innerText="Valid Name";
+                msg.className="success";
+                nameValid=true;
+            }
+        }
+
+        function validateEmial(){
+            let email=document.getElementById("email").value;
+            let msg=document.getElementById("emailMsg");
+
+            if(email.includes("@")){
+                msg.innerText="Valid Emial"
+                msg.className="success";
+                emailValid=true;
+            }else{
+                msg.innerText="Email must Contain @";
+                emailValid=false;
+            }
+        }
+
+        function validateAge(){
+            let age=document.getElementById("age").value;
+            let msg=document.getElementById("ageMsg");
+
+            if(age>=18 && age<=45){
+                msg.innerText= "Valid age";
+                msg.className="success";
+                ageValid=true;
+            }else{
+                msg.innerText="Invalid Age You must be Over 18..";
+                ageValid=false;
+            }
+        }
+
+        function fromSubmitButton(){
+            if(nameValid && emailValid && ageValid){
+                let name=document.getElementById("username").value;
+                let email=document.getElementById("email").value;
+                let age=document.getElementById("age").value;
+
+                sessionStorage.setItem("UserName",name);
+                sessionStorage.setItem("email",email);
+                sessionStorage.setItem("age",age);
+
+                alert("Data is Succesfully addes to session storage..");
+            }
+            else{
+                alert("Please enter valid details");
+            }
+        }
+    </script>
+</body>
+</html>
