@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+        table{
+            margin: 20px auto;
+            border:2px solid black;
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 8px;
+        }
+        th{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="jobselect">Select a Job :</label>
+    <select id="jobselect">
+        <option value="AllEmployees">All Employees</option>
+        <option value="Manager">Manager</option>
+        <option value="Salesman">Salesman</option>
+        <option value="Clerk">Clerk</option>
+    </select>
+
+    <button onclick="showEmployeeDetails()">Show Empls</button>
+
+    <div id="result">
+        
+    </div>
+    <script>
+        let emplDetails = [
+            { id: 101, name: "Alice Johnson", department: "HR", salary: 50000, job: "Manager" },
+            { id: 102, name: "Bob Smith", department: "IT", salary: 60000, job: "Salesman" },
+            { id: 103, name: "Charlie Brown", department: "Finance", salary: 55000, job: "Clerk" },
+            { id: 104, name: "Diana Prince", department: "Marketing", salary: 52000, job: "Manager" },
+            { id: 105, name: "Ethan Hunt", department: "Operations", salary: 58000, job: "Salesman" },
+            { id: 106, name: "Fiona Glenanne", department: "HR", salary: 51000, job: "Clerk" }
+        ];
+
+        let result=document.getElementById("result");
+        // result.innerHTML=" ";
+        function showEmployeeDetails(){
+
+            let jobselect=document.getElementById("jobselect").value;
+            // console.log(jobselect);
+           let table=`<table>
+                            <tr>
+                                <th>Name</th>
+                                <th>DepartMent</th>
+                                <th>Job</th>
+                                <th>Salary</th>
+                            </tr>
+                        `  
+            emplDetails.forEach(emp=>{
+                if(jobselect=="AllEmployees" || jobselect==emp.job){
+                    table+=`
+                        <tr>
+                            <td>${emp.name}</td>
+                            <td>${emp.department}</td>
+                            <td>${emp.job}</td>
+                            <td>${emp.salary}</td>
+                        </tr> `
+                }
+            });
+            table+="</table>";
+            result.innerHTML=table;
+        }
+        
+    </script>
+</body>
+</html>
