@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation </title>
+</head>
+<body>
+    <h1>Encasulation - Student Details</h1>
+    <hr>
+
+    <button onclick="stdDetails()">Student Details</button>
+    <div id="output">
+
+    </div>
+    <script>
+        function stdDetails(){
+
+            class Student{
+                name="";
+                rollNumber=0;
+                marks=0;
+                
+                constructor(name,rollNumber,marks){
+                    this.name=name;
+                    this.rollNumber=rollNumber;
+                    this.marks=marks;
+                }
+                getDetails(){
+                    return `
+                    Name: ${this.name} <br>
+                    Roll No: ${this.rollNumber} <br>
+                    Marks: ${this.marks} <br>
+                    Grade:${this.getGrade()}<br>`;
+                }
+                getGrade(){
+                    if(this.marks>=90) return "A";
+                    else if(this.marks>=75) return "B";
+                    else if(this.marks>=50) return "C";
+                    else return "Fail";
+                }
+            }
+            
+            let s1=new Student("Rohini",20,80);
+            let s2=new Student("Rekha",21,40);
+            
+            document.getElementById("output").innerHTML=s1.getDetails() + s2.getDetails();
+        }
+    </script>
+</body>
+</html>
