@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+</head>
+<body>
+    <h1>inheritance</h1>
+    <hr>
+    <button onclick="buttonClick()">Inheritance</button>
+    <h2 id="details">
+
+    </h2>
+
+    <script>
+        function buttonClick(){
+            class Vehicle{
+                brand="";
+                speed=0;
+                constructor(brand,speed){
+                    this.brand=brand;
+                    this.speed=speed;
+                }
+                displayInfo(){
+                    return `
+                    Brand :${this.brand}<br>
+                    Speed :${this.speed} km/hr <br>
+                    `;
+                }
+            }
+            class Car extends Vehicle{
+                fuelType=" ";
+
+                constructor(brand,speed,fuelType){
+                    super(brand,speed);
+                    this.fuelType=fuelType;
+                }
+
+                showCarDetails(){
+                    return `      
+                    Fuel Type:${this.fuelType} <br><br>
+                    `
+                }
+            }
+
+            let Car1=new Car("BMW",120,"Petrol");
+
+            document.getElementById("details").innerHTML=Car1.displayInfo()+Car1.showCarDetails();
+        }
+    </script>
+</body>
+</html>
