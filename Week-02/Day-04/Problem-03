@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism & Method Overriding</title>
+    <style>
+        body{
+            background-color:bisque;
+        }
+        #Result{
+            border: 2px solid green;
+            padding: 20px;
+            border-left-width: 30px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Polymorphism & Method Overriding</h1>
+    <hr>
+    <div id="Result">
+<p>&cop</p>
+    </div>
+
+    <script>
+        class Payment{
+            payAmount(){
+                return `<h2>Processing Payment</h2>`;
+            }
+        }
+
+        class Pay extends Payment{
+            payAmount(){
+                return `<h2>Payment Completeed Succesfulllyyyy....</h2> <br>`;
+            }
+            CreditCardPayment(){
+                return `<h3>Amount Paid ₹5000 by using Credit Card </h3> <br>`;
+            }
+            UPIPayment(){
+                return `<h4>Amount Paid ₹5000 by using UPIPayment </h4> <br>`;
+            }
+            CashPayment(){
+                return `<h5>Amount Paid ₹5000 by using CashPayment </h5> <br>`;
+            }
+        }
+
+        let payment=new Payment();
+        let payObj=new Pay();
+
+        document.getElementById("Result").innerHTML=payment.payAmount() + "<hr>" +  payObj.payAmount() +payObj.CreditCardPayment() + payObj.UPIPayment()+ payObj.CashPayment();
+    </script>
+</body>
+</html>
