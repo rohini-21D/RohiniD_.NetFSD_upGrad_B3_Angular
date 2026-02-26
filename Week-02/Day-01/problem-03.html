@@ -5,38 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .button{
+        body{
             text-align: center;
+            background-color:bisque;
         }
     </style>
 </head>
 <body>
-    <h1 align="center">Location-Based Weather Logger</h1>
+    <h1>Location-Based Weather Logger </h1>
     <hr>
-    <div class="button">
-        <button onclick="locationButton()">Get My Location</button>
-    </div>
-    <p id="p1"></p>
+    <input type="text" id="userloc" placeholder="Enter Yoour Location">
+    <button onclick="getLocation()">Get My Location</button>
+
+    <div id="result"></div>
+    <div id="history"></div>
     <script>
-    
-    function  locationButton()
-		{
-            navigator.geolocation.getCurrentPosition(fn_display); 
-		}		
-		
-		function fn_display( args )
-		{
-			var x = args.coords.latitude;
-			var y = args.coords.longitude;
-		
-	        var  str  = "Latitude	: " + x;
-			str +="<br>";
-		    str += "Longitude : " + y; 
-		
-            var obj = document.getElementById("p1");
-			obj.innerHTML = str;
-		}	 
-		</script>	
+        function getLocation(){
+
+            let result=document.getElementById("result");
+
+            let userLoc=document.getElementById("userloc").value;
+            // console.log(userLoc);
+
+            navigator.geolocation.getCurrentPosition(fn_names);
+
+            function fn_names(args){
+               var lat= args.coords.latitude;
+            //    console.log(lat);
+               var lon= args.coords.longitude;
+               result.innerHTML=`
+               <h3>Long: ${userLoc}</h3>
+               Latitude: ${lat} <br>;
+               Longitude: ${lon}
+                `;
+
+                let locations=JSON.parse(localStorage.getItem("locations")) || [];
+
+                locations.push({
+                    place:userLoc,
+                    latitude:lat,
+                    longitude:lon
+                });
+
+                localStorage.setItem("locations",JSON.stringify(locations));
+
+            }
+
+            
+        }
     </script>
 </body>
 </html>
