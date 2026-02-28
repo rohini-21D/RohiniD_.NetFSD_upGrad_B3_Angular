@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data Fetcher </title>
+</head>
+<body>
+    <h1 align="center">Weather Data Fetcher </h1>
+    <hr>
+    <input type="text" name="Location" id="locId">
+    <button onclick="getweatherAsyn()">Get Weather(Async/await)</button>
+    <button onclick="getweatherProm()">Get Weather(Promise)</button>
+    <div id="result">
+
+    </div>
+    
+    <script>
+
+        const apiKey="1edd7b9bd9911da9261eb8e7aa8cd709";
+        async function getweatherAsyn(){
+            try {
+                let city=document.getElementById("locId").value;
+                 // console.log(city);
+                let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+                
+                let response=await fetch(url);
+                if(!response.ok){
+                    throw new Error("City not found or API error");
+                }
+                let data=await response.json();
+                displayWeather(data);
+            } catch (error) {
+                document.getElementById("result").innerHTML=`
+                Error: ${error.message};
+                `
+            }  
+        }
+        
+        function displayWeather(data){
+            document.getElementById("result").innerHTML=`
+            <h3>Weather in ${data.name}</h3>
+            <p>Temperature: ${data.main.temp} °C</p>
+            <p>Feels Like: ${data.main.feels_like} °C</p>
+            <p>Humidity: ${data.main.humidity}%</p>
+            <p>Weather: ${data.weather[0].description}</p>
+            <p>Wind Speed: ${data.wind.speed} m/s</p>
+            `
+        }
+    </script>
+</body>
+</html>
