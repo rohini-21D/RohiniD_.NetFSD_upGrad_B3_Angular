@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+
+        body{
+            text-align:center;
+            font-family: Arial;
+            background-color: lightblue;
+            margin-top:80px;
+        }
+        #feedbackForm{
+            background:white;
+            padding:20px;
+            width:300px;
+            margin:auto;
+            border-radius:10px;
+        }
+        input, textarea{
+            width:100%;
+            padding:8px;
+            margin:8px 0;
+        }
+
+        button{
+            padding:10px;
+            background-color:green;
+            color:white;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+        }
+
+        #successMessage{
+            display:none;
+            font-size:20px;
+            color:green;
+            margin-top:20px;
+        }
+
+        #error{
+            color:red;
+        }
+</style>
+</head>
+<body>
+    
+    <h2>Feedback Form</h2>
+    
+    <div id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <textarea id="feedback" placeholder="Enter your feedback"></textarea>
+        <button id="submitBtn">Submit Feedback</button>
+        <p id="error"></p>
+    </div>
+    
+    <div id="successMessage">
+        Feedback submitted successfully!
+    </div>
+    
+    <script>
+        const submitBtn = document.getElementById("submitBtn");
+        const form = document.getElementById("feedbackForm");
+        const message = document.getElementById("successMessage");
+        const error = document.getElementById("error");
+        
+        submitBtn.addEventListener("click", () => {
+            let name = document.getElementById("name").value.trim();
+            let feedback = document.getElementById("feedback").value.trim();
+    
+            if(name === "" || feedback === ""){
+                error.textContent = "Please enter all fields before submitting.";
+                return;
+            }
+            error.textContent = "";
+            form.style.display = "none";
+            message.style.display = "block";
+        });
+</script>
+
+</body>
+</html>
