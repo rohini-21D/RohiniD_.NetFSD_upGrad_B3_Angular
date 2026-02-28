@@ -37,6 +37,26 @@
             }  
         }
         
+        function getweatherProm(){
+            try{
+
+                let city=document.getElementById("locId").value;
+                let url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+                
+                fetch(url).then(res=>{
+                    if(!res.ok){
+                        throw new Error("City not found or API error");
+                    }
+                    return res.json();
+                })
+                .then(data=>{
+                    displayWeather(data)
+                });
+            }
+            catch(err){
+                document.getElementById("result").innerHTML=`Error :${err.message}`;
+            }
+        }
         function displayWeather(data){
             document.getElementById("result").innerHTML=`
             <h3>Weather in ${data.name}</h3>
