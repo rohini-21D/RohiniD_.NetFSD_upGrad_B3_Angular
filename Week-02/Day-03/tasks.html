@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager with Async Storage</title>
+    <style>
+
+        body{
+            text-align: center;
+            background-color: aquamarine;
+        }
+        input[type="text"]{
+            width: 300px;
+            padding: 10px;
+            background-color:antiquewhite;
+            border: none;
+            border-radius: 10px;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+        #addBtn:hover {
+            background-color:green;
+            color: white;
+        }
+        #delBtn:hover{
+            background-color:red;
+            color: wheat;
+        }
+        #listsBtn:hover{
+            background-color:blueviolet;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Task Manager</h2>
+    <input type="text" id="taskinput" placeholder="Enetr Task">
+    <button onclick="addTaskCallback()">Add (Callback)</button>
+    <button onclick="addTaskPromise()">Add (Promise)</button>
+    <button onclick="addTaskAsync()">Add (Async/Await)</button>
+    <button id="delBtn" onclick="deleteTask()">Delete Taks</button>
+    <button id="listsBtn" onclick="listTasks()">List Tasks</button>
+
+    <ul id="tasksList">
+
+    </ul>
+
+    <script>
+        let tasks=[];
+        let list=document.getElementById("tasksList");
+
+        // console.log("CallBack Version")
+
+        function saveTaskCallback (task,callback){
+            setTimeout(()=>{
+                tasks.push(task);
+                callback(tasks);
+            },1000);
+        }
+        function addTaskCallback(){
+           let task= document.getElementById("taskinput").value;
+           saveTaskCallback(task,(data)=>{
+            alert(`Task Added(Callback):${task}`);
+            displayTasks(data);
+           });
+        }
+
+        // console.log("Promises"); 
+        function saveTaskPromise(task){
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    tasks.push(task);
+                    resolve(tasks);
+                }, 1000);
+            });
+        };
+
+        function addTaskPromise(){
+            let task = document.getElementById("taskinput").value;
+
+            saveTaskPromise(task)
+            .then(data => {
+                alert(`Task Added (Promise): ${task}`);
+                displayTasks(data);
+            });
+        };
+
+        async function addTaskAsync (){
+            const task = document.getElementById("taskinput").value;
+            const data = await saveTaskPromise(task);
+            alert(`Task Added (Async/Await): ${task}`);
+            displayTasks(data);
+        }
+       
+        function listTasks(){
+            displayTasks(tasks);
+        }
+
+        function deleteTask(){
+            tasks.pop();
+            displayTasks(tasks);
+        }
+
+        function displayTasks (data){
+            list.innerHTML=" ";
+            data.forEach((task,index) => {
+                list.innerHTML+=`<li>Task ${index+1}: ${task}</li>`
+            });
+        }
+    </script>
+</body>
+</html>
