@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity To-Do App</title>
+    <style>
+    body{
+        background-color:bisque;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    h1{
+        text-align:center;
+    }
+    
+    .container{
+        max-width:600px;
+        margin:auto;
+    }
+    
+    .input-box{
+        display:flex;
+        gap:10px;
+        margin-bottom:20px;
+    }
+    
+    input{
+        flex:1;
+        padding:10px;
+    }
+    
+    button{
+        padding:10px 15px;
+        cursor:pointer;
+    }
+    
+    ul{
+        list-style:none;
+        padding:0;
+    }
+    
+    li{
+        background:white;
+        padding:10px;
+        margin-bottom:10px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        border-radius:6px;
+    }
+    
+    .completed{
+        text-decoration: line-through;
+        color: gray;
+    }
+    </style>
+</head>
+
+<body>
+    
+    <h1>To-Do List</h1>
+    
+    <div class="container">
+        
+        <div class="input-box">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        
+        <ul id="taskList"></ul>
+        
+    </div>
+    
+    <script>
+
+        
+        
+        
+        const input = document.getElementById("taskInput");
+        const addBtn = document.getElementById("addTaskBtn");
+        const taskList = document.getElementById("taskList");
+        
+        
+        addBtn.addEventListener("click", addTask);
+        
+        // Event Delegation
+        taskList.addEventListener("click", handleTaskActions);
+        
+        
+        function addTask(){
+            
+            const taskText = input.value.trim();
+            
+            if(taskText === ""){
+                alert("Enter a task");
+                return;
+            }
+            
+            const li = document.createElement("li");
+            
+            li.innerHTML = `
+            <span class="task-text">${taskText}</span>
+            <div>
+                <button class="complete-btn">✔</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+                `;
+                
+                taskList.appendChild(li);
+                
+                input.value = "";
+        }
+
+            
+            // Handle complete & delete
+        function handleTaskActions(e){
+            const target = e.target;
+            const li = target.closest("li");
+            
+            if(target.classList.contains("delete-btn")){
+                deleteTask(li);
+            }
+            
+            if(target.classList.contains("complete-btn")){
+                toggleComplete(li);
+            }
+        }
+        
+        // Delete function
+        function deleteTask(task){
+            task.remove();
+        }
+        
+        
+        function toggleComplete(task){
+            task.classList.toggle("completed");
+        }
+        
+    </script>
+
+</body>
+</html>
+
