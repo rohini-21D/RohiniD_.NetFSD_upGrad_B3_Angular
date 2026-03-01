@@ -127,7 +127,36 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="eventModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-header">
+                    <h5>Add Event</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                
+                <div class="modal-body">
+                    <form id="eventForm">
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Event Name</label>
+                            <input type="text" class="form-control" id="eventName" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Event Date</label>
+                            <input type="date" class="form-control" id="eventDate" required>
+                        </div>
+                        <button class="btn btn-primary w-100">Add Event</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
     
+
     <footer class="p-4">
         College Event Management System &copy; 2026
     </footer>
