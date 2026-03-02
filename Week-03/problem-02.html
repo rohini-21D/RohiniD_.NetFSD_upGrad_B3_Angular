@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic FAQ Toggle Section</title>
+    <style>
+        .container{
+            width: 80%;
+            margin: 20px auto;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        div{
+            margin-bottom: 20px;
+        }
+        .question{
+            font-weight: bold;
+            background-color:aquamarine ;
+            padding: 20px;
+            border-radius: 10px;
+        }
+         .answers:hover{
+            background-color: ghostwhite;
+            border-left: 5px solid green;
+            
+        }
+        .answers{
+            display: none;
+            font-weight: bold;
+            background-color:ghostwhite;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .highlit{
+            background-color:black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic FAQ Toggle Section</h1>
+    <hr>
+
+    <div class="container">
+        <div class="question">1. What is jQuery?</div>
+        <div class="answers">jQuery is a fast and lightweight JavaScript library used for DOM manipulation and event handling.</div>
+        <div class="question">2. Why do we use jQuery?</div>
+        <div class="answers">It simplifies JavaScript coding and works across different browsers..</div>
+        <div class="question">3. What is slideToggle() in jQuery?</div>
+        <div class="answers">slideToggle() shows or hides elements with a sliding animation.</div>
+        <div class="question">4. What is a selector in jQuery?</div>
+        <div class="answers">Selectors are used to select HTML elements like class, id, or tag.</div>
+        <div class="question">5. Can jQuery work with events?</div>
+        <div class="answers">Yes, jQuery handles events like click, hover, submit, and more.</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".question").click(function(){
+                // $(".answers").slideToggle()
+                $(".answers").hide();
+                $(this).next('.answers').slideToggle();
+                $(this).toggleClass("highlit");
+            })
+        })
+    </script>
+</body>
+</html>
