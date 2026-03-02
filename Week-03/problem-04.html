@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List Application</title>
+    <style>
+        body{
+            background-color:bisque;
+        }
+        .container{
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        input[type="text"]{
+            width: 80%;
+            padding: 10px;
+            border: none;
+            background-color:antiquewhite;
+            border-radius: 10px;
+        }
+        #btn1{
+            width: 15%;
+            padding: 10px;
+            border: none;
+            background-color: green;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .tasks{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cmplt{
+            width: 100px;
+            padding: 10px;
+            border: none;
+            background-color: orange;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .del{
+            width: 100px;
+            padding: 10px;
+            border: none;
+            background-color: red;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+        }
+        .completed{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Interactive To-Do List Application</h1>
+    <hr>
+    <div class="container">
+        <input type="text" name="todo" id="text1" placeholder="Enter here...">
+        <button id="btn1">Add Task</button>
+        <div id="listid">
+
+        </div>
+
+        <div class="count">
+            Total Tasks= <span id="totalTasks">0</span> <br><br>
+            Completed Tasks= <span id="completedTasks">0</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            let totalTasks=0;
+            let completedTasks=0;
+            $("#btn1").click(function(){
+               let txt= $("#text1").val().trim();
+               if(txt===""){
+                alert("Please enter a task..");
+                return;
+               }
+               totalTasks++;
+               $("#listid").append(
+                `<div class="tasks"> 
+                    <h3 class="taskTest"> ${txt}</h3>
+                    <div class="btns">
+                        <button class="cmplt">Complete</button>
+                        <button class="del">Delete</button>
+                    </div>
+                </div>`
+               );
+               $("#text1").val("");
+               $("#totalTasks").text(Number(totalTasks));
+            })
+
+            // now we can do the for the completed task
+
+            $("#listid").on("click",".cmplt",function(){
+               let task= $(this).closest(".tasks").find(".taskTest");
+               task.toggleClass("completed");
+               if(task.hasClass("completed")){
+                completedTasks++;
+               }else{
+                completedTasks--;
+               }
+               $("#completedTasks").text(Number(completedTasks));
+            })
+
+            $("#listid").on("click",".del",function(){
+                let task=$(this).closest(".tasks");
+                if(task.find(".taskTest").hasClass("completed")){
+                    completedTasks--;
+                    $("#completedTasks").text(Number(completedTasks));
+                }
+                task.remove();
+
+                totalTasks--;
+                $("#totalTasks").text(totalTasks);
+            })
+           
+        })
+    </script>
+</body>
+</html>
