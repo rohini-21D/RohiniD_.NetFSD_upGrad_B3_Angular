@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body { 
-            font-family: sans-serif; 
-            max-width: 500px; 
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            padding: 20px; 
-            border-radius: 5px; 
-        }
         div { 
             margin-bottom: 15px;
         }
@@ -38,7 +30,7 @@
 <body>
     <h1>Feedback Form</h1>
     <hr>
-    <form action="/submit_feedback" method="POST" id="feedbackForm">
+    <form action="feedback.php" method="POST" id="feedbackForm">
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -73,19 +65,17 @@
         $(document).ready(function(){
             $("#btn1").click(function(e){
                 e.preventDefault();
-                let name=$("#name").val().trim();
+                let name=$("#name").val();
                 // alert(name);
-                let email=$("#email").val().trim();
+                let email=$("#email").val();
                 // alert(email);
-                if(name==="" || email===""){
-                    alert("Please enter a valid name and email");
+                if(name=="" || email==""){
+                    $("#message").text("Please enter a valid name and email").css("color","red");
                     return;
-                }
-
-                $("#feedbackForm").hide();
-
-                $("#message").text("Feedback Submittes Succesfully..").css("color","green");
-                   
+                }else{
+                    $("#feedbackForm").hide();
+                    $("#message").text("Feedback Submittes Succesfully..").css("color","green");
+                }  
             })
         })
     </script>
