@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            max-width: 500px; 
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 20px; 
+            border-radius: 5px; 
+        }
+        div { 
+            margin-bottom: 15px;
+        }
+        label { 
+            display: block; 
+            margin-bottom: 5px; 
+            font-weight: bold; 
+        }
+        input, select, textarea { 
+            width: 100%; 
+            padding: 8px; 
+            box-sizing: border-box; 
+        }
+        button { 
+            padding: 10px 15px; 
+            background-color: #007BFF; 
+            color: white; 
+            border: none; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback Form</h1>
+    <hr>
+    <form action="/submit_feedback" method="POST" id="feedbackForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="rating">Course Rating:</label>
+            <select id="rating" name="rating">
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="average">Average</option>
+                <option value="poor">Poor</option>
+            </select>
+        </div>
+        <div>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+        <div>
+            <button id="btn1">Submit Feedback</button>
+        </div>
+    </form>
+
+    <h1 id="message">
+
+    </h1>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(e){
+                e.preventDefault();
+                let name=$("#name").val().trim();
+                // alert(name);
+                let email=$("#email").val().trim();
+                // alert(email);
+                if(name==="" || email===""){
+                    alert("Please enter a valid name and email");
+                    return;
+                }
+
+                $("#feedbackForm").hide();
+
+                $("#message").text("Feedback Submittes Succesfully..").css("color","green");
+                   
+            })
+        })
+    </script>
+</body>
+</html>
