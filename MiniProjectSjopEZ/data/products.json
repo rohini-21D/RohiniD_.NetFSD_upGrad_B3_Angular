@@ -1,0 +1,262 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "description": "High performance laptop with 16GB RAM and 512GB SSD.",
+        "price": 60000,
+        "image": ["Images/Laptop.jpg",
+                  "Images/laptop2.jpg",
+                  "Images/laptop3.jpg",
+                  "Images/laptop4.jpg",
+                  "Images/laptop5.jpg"
+                ],
+        "category": "Electronics"
+    },
+    {
+        "id": 2,
+        "name": "Smartphone",
+        "description": "Latest smartphone with excellent camera and battery life.",
+        "price": 25000,
+        "image":[ "Images/Smartphone.jpg",
+                  "Images/smartphone(1).jpg",
+                  "Images/smartphone(2).jpg",
+                  "Images/smartphone(3).jpg",
+                  "Images/smartphone(4).jpg"
+                ],                
+        "category": "Electronics"
+    },
+    {
+        "id": 3,
+        "name": "Headphones",
+        "description": "Wireless headphones with noise cancellation.",
+        "price": 5000,
+        "image": ["Images/headphones(1).jpg",
+                  "Images/headphones (2).jpg",
+                  "Images/headphones (3).jpg",
+                  "Images/headphones (4).jpg",
+                  "Images/headphones (5).jpg"
+                ],
+        "category": "Electronics"
+    },
+    {
+        "id": 4,
+        "name": "Smart Watch",
+        "description": "Fitness tracking smartwatch with heart rate monitor.",
+        "price": 7000,
+        "image": ["Images/Smart Watch.jpg",
+                  "Images/smartwatch(1).jpg",
+                  "Images/smartwatch(2).jpg",
+                  "Images/smartwatch(3).jpg",
+                  "Images/smartwatch(4).jpg"
+                ],
+        "category": "Electronics"
+    },
+    {
+        "id": 5,
+        "name": "Bluetooth Speaker",
+        "description": "Portable Bluetooth speaker with deep bass.",
+        "price": 3500,
+        "image": ["Images/bluetoothspeaker(1).jpg",
+                  "Images/bluetoothspeaker(2).jpg",
+                  "Images/bluetoothspeaker(3).jpg",
+                  "Images/bluetoothspeaker(4).jpg",
+                  "Images/bluetoothspeaker(5).jpg"
+                ],
+        "category": "Electronics"
+    },
+    {
+        "id": 6,
+        "name": "Tablet",
+        "description": "10-inch tablet suitable for entertainment and work.",
+        "price": 18000,
+        "image": ["Images/Tablet.jpg",
+                  "Images/tablet(1).jpg",
+                  "Images/tablet(2).jpg",
+                  "Images/tablet(3).jpg",
+                  "Images/tablet(4).jpg"
+                 ],
+        "category": "Electronics"
+    },
+    {
+        "id": 7,
+        "name": "Keyboard",
+        "description": "Mechanical keyboard with backlit keys.",
+        "price": 2500,
+        "image": ["Images/Keyboard.jpg",
+                  "Images/keyboard(1).jpg",
+                  "Images/keyboard(2).jpg",
+                  "Images/keyboard(3).jpg",
+                  "Images/keyboard(4).jpg"
+                 ],
+        "category": "Accessories"
+    },
+    {
+        "id": 8,
+        "name": "Mouse",
+        "description": "Wireless optical mouse with ergonomic design.",
+        "price": 1200,
+        "image": ["Images/Mouse.jpg",
+                  "Images/mouse(1).jpg",
+                  "Images/mouse(2).jpg",
+                  "Images/mouse(3).jpg",
+                  "Images/mouse(4).jpg"
+                 ],
+        "category": "Accessories"
+    },
+    {
+        "id": 9,
+        "name": "Monitor",
+        "description": "24-inch Full HD monitor with vibrant display.",
+        "price": 12000,
+        "image": ["Images/Monitor.jpg",
+                  "Images/monitor(1).jpg",
+                  "Images/monitor(2).jpg",
+                  "Images/monitor(3).jpg",
+                  "Images/monitor(4).jpg"
+                ],
+        "category": "Electronics"
+    },
+    {
+        "id": 10,
+        "name": "Printer",
+        "description": "All-in-one printer for home and office use.",
+        "price": 8500,
+        "image": ["Images/Printer.jpg",
+                  "Images/printer(1).jpg",
+                  "Images/printer(2).jpg",
+                  "Images/printer(3).jpg",
+                  "Images/printer(4).jpg"
+                 ],
+        "category": "Electronics"
+    },
+    {
+        "id": 11,
+        "name": "Backpack",
+        "description": "Stylish and durable backpack for daily use.",
+        "price": 1500,
+        "image":[ "Images/backpack (1).jpg",
+                  "Images/backpack (2).jpg",
+                  "Images/backpack (3).jpg",
+                  "Images/backpack (4).jpg",
+                  "Images/backpack (5).jpg"
+                ],
+        "category": "Fashion"
+    },
+    {
+        "id": 12,
+        "name": "Running Shoes",
+        "description": "Comfortable running shoes for men and women.",
+        "price": 3200,
+        "image": ["Images/Running Shoes.jpg",
+                  "Images/runningshoes(1).jpg",
+                  "Images/runningshoes(2).jpg",
+                  "Images/runningshoes(3).jpg",
+                  "Images/runningshoes(4).jpg"
+                 ],
+        "category": "Fashion"
+    },
+    {
+        "id": 13,
+        "name": "T-Shirt",
+        "description": "Cotton round-neck t-shirt with soft fabric.",
+        "price": 800,
+        "image": ["Images/tshirt(1).jpg",
+                  "Images/tshirt(2).jpg",
+                  "Images/tshirt(3).jpg",
+                  "Images/tshirt(4).jpg",
+                  "Images/tshirt(5).jpg"
+                 ],
+        "category": "Fashion"
+    },
+    {
+        "id": 14,
+        "name": "Jeans",
+        "description": "Slim fit denim jeans with premium quality fabric.",
+        "price": 1800,
+        "image":["Images/Jeans.jpg",
+                 "Images/jeans (1).jpg",
+                 "Images/jeans (2).jpg",
+                 "Images/jeans (3).jpg",
+                 "Images/jeans (4).jpg"
+                ],
+        "category": "Fashion"
+    },
+    {
+        "id": 15,
+        "name": "Office Chair",
+        "description": "Ergonomic office chair with adjustable height.",
+        "price": 6500,
+        "image":[ "Images/Office Chair.jpg",
+                  "Images/officechair(1).jpg",
+                  "Images/officechair(2).jpg",
+                  "Images/officechair(3).jpg",
+                  "Images/officechair(4).jpg"
+                ],
+        "category": "Furniture"
+    },
+    {
+        "id": 16,
+        "name": "Study Table",
+        "description": "Wooden study table with storage shelf.",
+        "price": 5500,
+        "image": ["Images/Study Table.jpg",
+                  "Images/studytable(1).jpg",
+                  "Images/studytable(2).jpg",
+                  "Images/studytable(3).jpg",
+                  "Images/studytable(4).jpg"
+                 ],
+        "category": "Furniture"
+    },
+    {
+        "id": 17,
+        "name": "Water Bottle",
+        "description": "Insulated stainless steel water bottle.",
+        "price": 600,
+        "image": ["Images/bottle(1).jpg",
+                  "Images/bottle(2).jpg",
+                  "Images/bottle(3).jpg",
+                  "Images/bottle(4).jpg",
+                  "Images/bottle(5).jpg"
+                 ],
+        "category": "Home"
+    },
+    {
+        "id": 18,
+        "name": "Coffee Maker",
+        "description": "Compact coffee maker for fresh coffee anytime.",
+        "price": 4000,
+        "image": ["Images/coffeemaker(1).jpg",
+                  "Images/coffeemaker(2).jpg",
+                  "Images/coffeemaker(3).jpg",
+                  "Images/coffeemaker(4).jpg",
+                  "Images/coffeemaker(5).jpg"
+                ],
+        "category": "Home Appliances"
+    },
+    {
+        "id": 19,
+        "name": "Fan",
+        "description": "High-speed ceiling fan with energy efficiency.",
+        "price": 2800,
+        "image": ["Images/Fan.jpg",
+                  "Images/fan(1).jpg",
+                  "Images/fan(2).jpg",
+                  "Images/fan(3).jpg",
+                  "Images/fan(4).jpg"
+                 ],
+        "category": "Home Appliances"
+    },
+    {
+        "id": 20,
+        "name": "Air Purifier",
+        "description": "Advanced air purifier for clean indoor air.",
+        "price": 9500,
+        "image": ["Images/airpurifier1.jpg",
+                  "Images/airpurifier2.jpg",
+                  "Images/airpurifier3.jpg",
+                  "Images/airpurifier4.jpg",
+                  "Images/airpurifier5.jpg"
+                ],
+        "category": "Home Appliances"
+    }
+]
