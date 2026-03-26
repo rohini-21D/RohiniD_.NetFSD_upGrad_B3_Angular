@@ -1,0 +1,29 @@
+﻿@model List<Product>
+
+    <h2>Products List</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ProdId</th>
+                <th>ProdName</th>
+                <th>ProdCategory</th>
+                <th>ProdPrice</th>
+                <th>Action </th> 
+            </tr> 
+        </thead>
+        <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.ProdId</td>
+                <td>@item.ProdName</td>
+                <td>@item.ProdCategory</td>
+                <td>@item.ProdPrice</td>
+                <td>
+                    <a href="Product/Details/@item.ProdId">View Details</a>
+                </td>
+            </tr>
+        }
+            
+        </tbody>
+</table>
