@@ -1,0 +1,32 @@
+﻿@model Product
+<h1>Create Product Page</h1>
+
+<form asp-action="create" method="post">
+
+    <div class="mb-3">
+        <label asp-for="ProdId" class="form-label">Product Id</label>
+        <input asp-for="ProdId" class="form-control" />
+        <span asp-validation-for="ProdId" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProdName" class="form-label">Product Name</label>
+        <input asp-for="ProdName" class="form-control" />
+        <span asp-validation-for="ProdName" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProdCategory" class="form-label">Category</label>
+        <input asp-for="ProdCategory" class="form-control" />
+        <span asp-validation-for="ProdCategory" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ProdPrice" class="form-label">Price</label>
+        <input asp-for="ProdPrice" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="ProdPrice" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
