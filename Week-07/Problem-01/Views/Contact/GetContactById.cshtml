@@ -1,0 +1,39 @@
+﻿@model ContactInfo
+
+<h1>GEtting Contacts BY ID </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ContactId</th>
+            <th>FullNAme</th>
+            <th>ComapanyName</th>
+            <th>EmailId</th>
+            <th>MobileNo</th>
+            <th>Designation</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            <tr>
+                <td>@Model.ContactID</td>
+                <td>@Model.FirstName @Model.LastName</td>
+                <td>@Model.CompanyName</td>
+                <td>@Model.EmailId</td>
+                <td>@Model.MobileNo</td>
+                <td>@Model.Designation</td>
+            </tr>
+        }
+        else
+        {
+            <tr>
+                <td colspan="7" class="text-danger text-center">Contacat Not found</td>
+            </tr>
+        }
+    </tbody>
+
+    <a asp-action="ShowContacts" class="btn btn-primary mt-2">Back to Contacts</a>
+
+   
+</table>
