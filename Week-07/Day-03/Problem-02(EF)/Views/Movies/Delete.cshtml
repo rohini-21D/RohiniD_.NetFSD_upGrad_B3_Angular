@@ -1,0 +1,25 @@
+﻿@model Movies
+
+<h1 class="text-center text-danger">Are you Sure...</h1>
+<h2 class="text-center text-danger">You want to delete</h2>
+
+<div class="text-center">
+    <p>ID : @Model.Id</p>
+    <p>Title : @Model.Title</p>
+    <p>Genre : @Model.Genre</p>
+    <p>ReleaseDate : @Model.ReleaseDate</p>
+    <p>Price : @Model.Price</p>
+    <p>Rating : @Model.Rating</p>
+</div>
+
+
+<form asp-action="Delete" method="post">
+
+ 
+    <input type="hidden" asp-for="Id" />
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+
+</form>

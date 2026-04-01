@@ -1,0 +1,45 @@
+﻿@model Movies
+
+<h1 class="text-center text-info">Movie - Edit Page</h1>
+
+<form asp-action="Edit"method="post">
+    
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mt-3">
+        <label>Title</label>
+        <input asp-for="Title" class="form-control" />
+       
+    </div>
+
+    <div class="mt-3">
+        <label>Genre</label>
+        <input asp-for="Genre" class="form-control" />
+       
+    </div>
+
+    <div class="mt-3">
+        <label>ReleaseDate</label>
+        <input asp-for="ReleaseDate" class="form-control" />
+       
+    </div>
+
+    <div class="mt-3">
+        <label>Price</label>
+        <input asp-for="Price" class="form-control" />
+        
+    </div>
+        
+    <div class="mt-3">
+        <label>Rating</label>
+        <input asp-for="Rating" class="form-control" />
+        
+    </div>
+   
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>
+
+<a asp-action="Index" class="btn btn-primary mt-2">Back to Movies</a>
+
