@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Product Page";
+}
+
+<h2>Add Product</h2>
+
+<form method="post" action="/product/add">
+    <div>
+        <label>Product Name:</label>
+        <input type="text" name="name" class="form-control" required />
+    </div>
+
+    <div>
+        <label>Price:</label>
+        <input type="number" name="price" class="form-control" required />
+    </div>
+
+    <div>
+        <label>Quantity:</label>
+        <input type="number" name="quantity" class="form-control" required />
+    </div>
+
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </div>
+    
+</form>
+
+<hr />
+
+<h2>Product List</h2>
+
+<table class="table">
+    <thead>
+
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    </thead>
+    <tbody>
+
+
+    @if (ViewBag.Products != null)
+    {
+        foreach (var item in ViewBag.Products)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
