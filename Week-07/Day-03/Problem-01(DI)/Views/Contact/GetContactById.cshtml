@@ -1,0 +1,17 @@
+﻿@model WebApplication4.Models.ContactInfo
+
+<h2>Contact Details</h2>
+
+@if (Model != null)
+{
+    <p>ID: @Model.ContactId</p>
+    <p>Name: @Model.FirstName @Model.LastName</p>
+    <p>Email: @Model.EmailId</p>
+    <p>Mobile: @Model.MobileNo</p>
+}
+else
+{
+    <p>No contact found</p>
+}
+
+<a asp-action="ShowAllContacts"  class="btn btn-primary mt-3">Back to Contacts</a>

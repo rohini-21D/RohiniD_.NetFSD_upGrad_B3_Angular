@@ -1,0 +1,49 @@
+﻿@model ContactInfo
+
+<h2>Add Contact</h2>
+
+<form method="post">
+    <div class="mt-3">
+        <label>ContactID: </label>
+        <input asp-for="ContactId" class="form-control" placeholder="ID" />
+        <span asp-validation-for="ContactId"></span>
+    </div>
+    
+    <div class="mt-3">
+        <label>FirstName</label>
+        <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    
+    <div class="mt-3">
+        <label>LastName</label>
+        <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    
+    <div>
+        <label>CompanyName</label>
+        <input asp-for="CompanyName" class="form-control" placeholder="Company" />
+        <span asp-validation-for="CompanyName"></span>
+    </div>
+
+    <div class="mt-3">
+        <label>EmialId</label>
+        <input asp-for="EmailId" class="form-control" placeholder="Email" />
+        <span asp-validation-for="EmailId"></span>
+    </div>
+
+    <div class="mt-3">
+        <label>MObile NUmber</label>
+        <input asp-for="MobileNo" class="form-control" placeholder="Mobile" />
+        <span asp-validation-for="MobileNo"></span>
+    </div>
+
+    <div class="mt-3">
+        <label>Designation</label>
+        <input asp-for="Designation" class="form-control" placeholder="Designation" />
+        <span asp-validation-for="Designation"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Add</button>
+</form>
