@@ -1,0 +1,14 @@
+﻿@model Course
+
+<h1>From - Adding Course</h1>
+
+<form asp-action="AddCourse"  method="post">
+    <label>Adding Courses </label>
+    <input type="text" asp-for="CourseName" class="form-control" placeholder="Course name.." />
+    <button type="submit" class="btn btn-primary mt-2">Save</button>
+</form>
+
+@section Scripts {
+    <!-- jQuery validation + Unobtrusive scripts -->
+    <partial name="_ValidationScriptsPartial" />
+}

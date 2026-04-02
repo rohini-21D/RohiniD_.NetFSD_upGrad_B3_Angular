@@ -1,0 +1,22 @@
+﻿
+@model List<Course>
+<h1>Courses Enrolled</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>CouseId</th>
+            <th>CourseName</th>
+            <th>StudentsEnrolled</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var cour in Model)
+        {
+            <tr>
+                <td>@cour.CourseId</td>
+                <td>@cour.CourseName</td>
+                <td>@cour.Students</td>
+            </tr>
+        }
+    </tbody>
+</table>
