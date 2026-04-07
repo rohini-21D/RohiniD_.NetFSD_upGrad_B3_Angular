@@ -1,0 +1,32 @@
+﻿@model Movies
+
+@{
+    ViewData["Title"] = "Details";
+}
+<h1>Movies - View Movie</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Genere</th>
+            <th>Release Dat</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            
+            <td>@Model.Id</td>
+            <td>@Model.Title</td>
+            <td>@Model.Genre</td>
+            <td>@Model.ReleaseDate</td>
+            <td>@Model.Price</td>
+            <td>@Model.Rating</td>
+        </tr>
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-primary mt-2"> Back to Movies</a>
